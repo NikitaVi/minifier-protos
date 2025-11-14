@@ -1,1 +1,1 @@
-module minifier-protos
+module github.com/NikitaVi/minifier-protos
