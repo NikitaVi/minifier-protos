@@ -8,6 +8,7 @@ service AuthV1 {
   rpc Register(RegisterRequest) returns (RegisterResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc IsPremium(IsPremiumRequest) returns (IsPremiumResponse);
+  rpc ValidateToken(IsPremiumRequest) returns (IsPremiumResponse);
 }
 
 message RegisterRequest {
@@ -34,4 +35,13 @@ message IsPremiumRequest {
 
 message IsPremiumResponse {
   bool is_premium = 1;
+}
+
+message ValidateTokenRequest {
+  string token = 1;
+}
+
+message ValidateTokenResponse {
+  bool is_valid = 1;
+  string user_guid = 2;
 }
