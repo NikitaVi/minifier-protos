@@ -8,7 +8,7 @@ service AuthV1 {
   rpc Register(RegisterRequest) returns (RegisterResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc IsPremium(IsPremiumRequest) returns (IsPremiumResponse);
-  rpc ValidateToken(IsPremiumRequest) returns (IsPremiumResponse);
+  rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
 }
 
 message RegisterRequest {
